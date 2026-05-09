@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Adaptive Start",
+  "version": "1.0.0",
+  "description": "Quick nudge to help you start when you're stuck.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"]
+}

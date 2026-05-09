@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adaptive Start</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+
+  <!-- reason screen -->
+  <div id="screen-reason" class="screen active">
+    <div class="header">
+      <div class="orb"></div>
+      <h1>Let’s get you moving</h1>
+      <p class="subtitle">What’s getting in the way?</p>
+    </div>
+
+    <div class="reason-grid">
+      <button class="reason-btn" data-reason="overwhelmed">
+        <span class="reason-icon">😰</span>
+        <span class="reason-label">Overwhelmed</span>
+      </button>
+
+      <button class="reason-btn" data-reason="distracted">
+        <span class="reason-icon">🌀</span>
+        <span class="reason-label">Distracted</span>
+      </button>
+
+      <button class="reason-btn" data-reason="tired">
+        <span class="reason-icon">😴</span>
+        <span class="reason-label">Tired</span>
+      </button>
+
+      <button class="reason-btn" data-reason="lost">
+        <span class="reason-icon">🗺️</span>
+        <span class="reason-label">Not sure where to start</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- suggestion + timer -->
+  <div id="screen-suggestion" class="screen">
+    <div class="header">
+      <div class="orb orb--green"></div>
+      <h1>Try this</h1>
+    </div>
+
+    <div class="suggestion-card">
+      <p id="suggestion-text"></p>
+    </div>
+
+    <div class="timer-wrap">
+      <svg class="timer-ring" viewBox="0 0 100 100">
+        <circle class="ring-track" cx="50" cy="50" r="42" />
+        <circle id="ring-progress" class="ring-progress" cx="50" cy="50" r="42" />
+      </svg>
+
+      <div class="timer-text">
+        <span id="timer-display">3:00</span>
+        <span class="timer-label">remaining</span>
+      </div>
+    </div>
+
+    <button id="btn-skip" class="btn btn--ghost">Skip</button>
+  </div>
+
+  <!-- feedback -->
+  <div id="screen-feedback" class="screen">
+    <div class="header">
+      <div class="orb orb--yellow"></div>
+      <h1>Time’s up</h1>
+      <p class="subtitle">Did that help?</p>
+    </div>
+
+    <div class="feedback-buttons">
+      <button id="btn-yes" class="btn btn--yes">
+        <span>✓</span> Yes
+      </button>
+
+      <button id="btn-no" class="btn btn--no">
+        <span>✗</span> Not really
+      </button>
+    </div>
+  </div>
+
+  <!-- done -->
+  <div id="screen-done" class="screen">
+    <div class="header">
+      <div class="orb orb--purple"></div>
+      <h1>Thanks</h1>
+      <p class="subtitle">This helps improve future suggestions.</p>
+    </div>
+
+    <p class="done-message" id="done-message"></p>
+
+    <button id="btn-restart" class="btn btn--primary">Start again</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
